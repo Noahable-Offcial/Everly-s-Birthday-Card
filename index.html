@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff0f5">
+  <meta name="description" content="A little birthday surprise for Everly.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Everly 💗">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
   <title>A Birthday Surprise for Everly 💗</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@600;700;800&display=swap');
@@ -122,6 +129,7 @@
       hint.textContent='Tap the little heart seal to open your envelope';
       replay.classList.remove('show');
     });
+    if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
   </script>
 </body>
 </html>
