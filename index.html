@@ -36,7 +36,7 @@
     .envelope.open .seal{opacity:0;scale:.5}
     .envelope.open .letter{transform:translateY(-135px);bottom:5px;z-index:5}
     .envelope.card-out .letter{transform:translateY(-155px) scale(1.045);z-index:8;box-shadow:0 14px 35px #9e496b35}
-    .envelope.card-open .letter{height:330px;bottom:-40px;transform:translateY(-130px) scale(1.03);z-index:9;padding:24px 22px}
+    .envelope.card-open .letter{height:auto;min-height:310px;max-height:min(70svh,460px);overflow-y:auto;bottom:-40px;transform:translateY(-130px) scale(1.03);z-index:9;padding:24px 22px}
     .envelope.card-open .letter .inside{display:flex}
     .inside{display:none;flex-direction:column;align-items:center;gap:10px;animation:appear .7s .2s both}
     @keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -67,15 +67,14 @@
         <button class="letter" id="letter" type="button" aria-label="Open the birthday card">
           <span class="mini">A little note for you</span>
           <span class="hat">🥳</span>
-          <strong>Happy Birthday Everly!</strong>
+          <strong>Happy 2nd Birthday Everly!</strong>
           <small>Tap to read your surprise ♡</small>
           <div class="inside">
             <div class="sparkles">✦ ♡ ✦</div>
             <div class="big-hat">🎂🎉</div>
-            <span class="age">TWO YEARS OLD! TWO! 💕</span>
+            <span class="age">2ND BIRTHDAY 💕</span>
             <h2>To Everly,</h2>
-            <p>Happy 2nd Birthday! I hope your day is full of giggles, fun, lovely surprises and the biggest slice of birthday cake. Keep being your amazing little self!</p>
-            <p>Have the most magical day ever. You deserve all the happiness in the world. 💗</p>
+            <p>Happy 2nd Birthday Everly!</p>
             <div class="signoff">Love from Noah ♡</div>
             <div class="sparkles">✧ 🎈 ✧</div>
           </div>
