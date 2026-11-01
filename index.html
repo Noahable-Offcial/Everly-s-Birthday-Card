@@ -20,6 +20,13 @@
     body:before,body:after{content:"✦　♕　✧　♕　✦";position:fixed;color:#8fb7e8;opacity:.42;font-size:22px;letter-spacing:18px;pointer-events:none;animation:drift 12s ease-in-out infinite alternate}
     body:before{top:8%;left:-25px;transform:rotate(-18deg)}body:after{bottom:9%;right:-25px;transform:rotate(16deg);animation-delay:-5s}
     @keyframes drift{to{translate:0 18px;rotate:5deg}}
+
+    .princess-wrap{display:flex;justify-content:center;align-items:center;margin:-2px auto 8px;position:relative;height:116px}
+    .princess{width:108px;height:116px;filter:drop-shadow(0 7px 8px #527fbd30);animation:princess-float 3.5s ease-in-out infinite}
+    .princess-sparkle{position:absolute;color:#d7ad55;font-size:18px;animation:twinkle 2s ease-in-out infinite alternate}
+    .princess-sparkle.one{left:calc(50% - 83px);top:19px}.princess-sparkle.two{left:calc(50% + 66px);top:42px;animation-delay:.7s}
+    @keyframes princess-float{50%{transform:translateY(-5px)}}@keyframes twinkle{to{opacity:.35;transform:scale(.7) rotate(25deg)}}
+    @media(prefers-reduced-motion:reduce){.princess{animation:none}.princess-sparkle{animation:none}}
     .scene{width:min(100%,560px);text-align:center;position:relative;z-index:1}
     .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:#648fc4;margin:0 0 12px}
     h1{font:clamp(30px,7vw,48px)/1.12 'Playfair Display',serif;color:#426b9f;margin:0 0 9px}
@@ -67,6 +74,32 @@
   <main class="scene">
     <p class="eyebrow">A little birthday surprise</p>
     <h1>A Fairytale Birthday for Everly</h1>
+    <div class="princess-wrap" role="img" aria-label="A fairytale princess in a sparkling blue ball gown">
+      <span class="princess-sparkle one">✦</span>
+      <svg class="princess" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="gown" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7fcff"/><stop offset=".48" stop-color="#a9cdf5"/><stop offset="1" stop-color="#668fc9"/></linearGradient>
+          <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9dc91"/><stop offset="1" stop-color="#c58a39"/></linearGradient>
+        </defs>
+        <!-- crown and hair -->
+        <path d="M42 27 36 8 51 18 60 3 69 18 84 8 78 29Z" fill="#e7c46e" stroke="#bd9141" stroke-width="1.5"/>
+        <circle cx="60" cy="12" r="3" fill="#fff5c8"/>
+        <path d="M35 34Q34 17 60 17Q88 18 86 48L83 73Q79 91 60 91Q39 88 35 69Z" fill="url(#hair)"/>
+        <ellipse cx="60" cy="49" rx="21" ry="27" fill="#ffe0c4"/>
+        <path d="M39 45Q35 19 61 20Q84 20 83 43Q74 33 64 31Q52 40 39 45Z" fill="url(#hair)"/>
+        <path d="M40 48Q29 54 38 77L44 83 45 61M80 47Q91 56 82 78L76 84 76 61" fill="url(#hair)"/>
+        <circle cx="52" cy="51" r="1.7" fill="#52627a"/><circle cx="68" cy="51" r="1.7" fill="#52627a"/>
+        <path d="M55 63Q60 67 65 63" fill="none" stroke="#c47779" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M48 76 72 76 76 91 44 91Z" fill="#ffe0c4"/>
+        <!-- puff sleeves and ball gown -->
+        <path d="M45 82Q34 77 26 88L19 101 39 108 47 96M75 82Q86 77 94 88L101 101 81 108 73 96" fill="#d8eaff" stroke="#8fb7e8" stroke-width="1.5"/>
+        <path d="M47 84Q60 91 73 84L82 104Q100 113 108 126H12Q20 112 38 104Z" fill="url(#gown)" stroke="#739bd0" stroke-width="1.5"/>
+        <path d="M47 86Q60 94 73 86L77 96Q60 104 43 96Z" fill="#fff" opacity=".85"/>
+        <path d="M23 119Q60 108 97 119" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+        <path d="M60 99 63 105 70 106 65 111 66 118 60 114 54 118 55 111 50 106 57 105Z" fill="#fff6d7"/>
+      </svg>
+      <span class="princess-sparkle two">✧</span>
+    </div>
     <p class="intro">A little magic, a royal wish, and a whole lot of sparkle. ✨</p>
     <section class="stage" aria-label="Interactive birthday card">
       <div class="envelope" id="envelope">
